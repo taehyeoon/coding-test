@@ -1,4 +1,4 @@
-package pack;
+package Baekjoon;
 
 import java.awt.Point;
 import java.io.BufferedReader;
