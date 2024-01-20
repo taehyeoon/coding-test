@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /*
-백준 나무제태크 16235
+백준 나무제태크 16235 G3
 시작 : 24-01-20 12:40
 끝 : 24-01-20 14:35
 실행시간 : 904ms
