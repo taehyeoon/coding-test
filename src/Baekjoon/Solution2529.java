@@ -10,16 +10,17 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /*
-백준 부등호 2526 S1
+백준 부등호 2529 S1
 시작 시간 : 24-01-24 19:15
 종료 시간 : 24-01-24 21:40
 실행시간 : 152ms
 
 고려사항
-
+백트래킹, DFS이용
+왼쪽부터 DFS 탐색으로 부등호에 따른 값비교
 */
 
-public class Solution2526 {
+public class Solution2529 {
 
 
     static int N;
