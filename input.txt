@@ -1,19 +1,10 @@
-3
-4
-1 2 3 4
-0 1 1 1
-1 0 1 1
-1 1 0 1
-1 1 1 0
-4
-1 2 2 1
-0 1 0 0
-1 0 1 0
-0 1 0 1
-0 0 1 0
-4
-1 1 2 2
-0 1 0 0
-1 0 1 0
-0 1 0 1
-0 0 1 0
+9 8
+antabtica
+antaxtica
+antadtica
+antaetica
+antaftica
+antagtica
+antahtica
+antajtica
+antaktica
