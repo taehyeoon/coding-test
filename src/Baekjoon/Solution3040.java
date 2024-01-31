@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /*
-백준 터렛 3040 B2
+백준 백설공주와일곱난쟁이 3040 B2
 시작 시간 : 24-01-31 11:20
 종료 시간 : 24-01-31 11:55
 실행시간 : 76ms
