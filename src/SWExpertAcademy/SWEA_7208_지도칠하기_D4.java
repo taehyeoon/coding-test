@@ -1,4 +1,4 @@
-package coding;
+package SWExpertAcademy;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -20,7 +20,7 @@ SWEA 지도칠하기 7208 D4
 3. 2번에서 도출된 값과 현재 가장 작은 값을 비교하여, 현재 가장 작은 값 갱신
 */
 
-public class Solution_7208_D4_지도칠하기_이태현 {
+public class SWEA_7208_지도칠하기_D4 {
 
     static int N, country, ans = Integer.MAX_VALUE;
     static int[] colorByCountry;

@@ -1,4 +1,4 @@
-package coding;
+package SWExpertAcademy;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -6,7 +6,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_6808_D3_규영이와인영이의카드게임_이태현 {
+/*
+시작 시간 : 24-01-30
+종료 시간 : 24-01-30
+실행 시간 : 1031ms
+메 모 리 : 22,224KB
+ */
+public class SWEA_6808_규영이와인영이의카드게임_D3 {
 
 	static int TC; 	
 

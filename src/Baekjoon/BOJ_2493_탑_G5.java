@@ -1,4 +1,4 @@
-package coding;
+package Baekjoon;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -26,7 +26,7 @@ import java.util.StringTokenizer;
 	- 스택의 모든 탑을 0으로 저장
 */
 
-public class Main_2493_탑_G5 {
+public class BOJ_2493_탑_G5 {
 
 	static int N;
 	static int[] lazer, result;

@@ -1,4 +1,4 @@
-package coding;
+package Baekjoon;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -18,7 +18,7 @@ import java.util.StringTokenizer;
 2. 구한 난쟁이의 합이 100이 되는 순간 난쟁이 목록을 출력
 */
 
-public class Main_3040_B2_백설공주와일곱난쟁이 {
+public class BOJ_3040_백설공주와일곱난쟁이_B2 {
 
 	static int[] data = new int[9];
 	static int[] result = new int[7];
