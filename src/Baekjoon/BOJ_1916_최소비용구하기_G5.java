@@ -1,21 +1,19 @@
-package coding.baekjoon;
+package Baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.StringTokenizer;
 
 /*
-시작 시간 : 24-03-13 
-종료 시간 : 24-03-13
-실행 시간 : ms
-메 모 리 : KB
+시작 시간 : 24-03-13 15:30
+종료 시간 : 24-03-13 17:05
+실행 시간 : 500ms
+메 모 리 : 53760KB
 */
 
 public class BOJ_1916_최소비용구하기_G5 {
@@ -36,15 +34,13 @@ public class BOJ_1916_최소비용구하기_G5 {
     static int N, M, S, E;
     static int[] dist;
     static List<Node>[] bus;
-    static boolean[] visited;
-    
+
     private static void input() throws IOException {
     	N = Integer.parseInt(br.readLine());
     	M = Integer.parseInt(br.readLine());
     
-    	visited = new boolean[N+1];
     	dist = new int[N+1];
-    	Arrays.fill(dist, Integer.MAX_VALUE / 2);
+    	Arrays.fill(dist, Integer.MAX_VALUE);
     	
     	bus = new ArrayList[N+1];
     	for(int i = 1; i <= N; i++) {
@@ -68,8 +64,7 @@ public class BOJ_1916_최소비용구하기_G5 {
     	PriorityQueue<Node> q = new PriorityQueue<>((o1, o2) -> Integer.compare(o1.cost, o2.cost));
     	q.offer(new Node(S, 0));
     	dist[S] = 0;
-    	visited[S] = true;
-    	
+
     	
     	while(!q.isEmpty()) {
     		Node cur = q.poll();
