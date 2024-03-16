@@ -1,9 +1,7 @@
 package Baekjoon;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 /*
 시작 시간 : 24-03-15 20:00
