@@ -11,7 +11,7 @@ import java.util.*;
 */
 
 
-public class SWEA_5643_특이한자석 {
+public class SWEA_4013_특이한자석 {
 
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static StringTokenizer st;
