@@ -1,65 +1,62 @@
+package Baekjoon;
+
 import java.io.*;
 import java.util.*;
 
 /*
-시작 시간 : 24-04-23 11:00
-종료 시간 : 24-04-23 14:06
-실행 시간 : 2216ms / 실패
-메 모 리 : 35780KB
+시작 시간 : 24-04-23
+종료 시간 : 24-04-23
+실행 시간 : 80ms / 실패
+메 모 리 : 11880KB
 */
 
 public class BOJ_1256_사전_G2 {
 
-	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	
-	static StringTokenizer st;
-	
-	public static void main(String[] args) throws Exception {
-			
-		StringBuilder ans = new StringBuilder();
-		List<Integer> save = new ArrayList<>();
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
-		int TC = Integer.parseInt(br.readLine());
-		
-		for(int tc = 0; tc < TC; tc++) {
-			
-			pq.clear();
-			save.clear();
-			int n = Integer.parseInt(br.readLine());
-			StringBuilder sb = new StringBuilder();
-			int cnt = 0;
-			
-			for(int i = 1; i <= n; i++) {
-				if(i % 10 == 1) {
-					st = new StringTokenizer(br.readLine());
-				}
-				int val = Integer.parseInt(st.nextToken());
-				pq.add(val);
-				
-				if(i % 2 == 1) {
-					
-					int qSize = pq.size();
-					int mid = qSize / 2;
-					
-					while(mid-- > 0) {
-						save.add(pq.poll());
-					}
-					cnt++;
-					sb.append(pq.peek() + " ");
-					for(int j = 0; j < save.size(); j++) {
-						pq.add(save.get(j));
-					}
-					save.clear();
-					if(cnt == 10) sb.append("\n");
-				}
-			}
-			
-			ans.append(cnt).append("\n");
-			ans.append(sb).append("\n");
-		}
-		
-		bw.write(ans.toString());
-		bw.close();
-	}
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static StringTokenizer st;
+
+    private static long[][] dp = new long[202][202];
+
+    public static void main(String[] args) throws IOException
+    {
+        StringBuilder sb = new StringBuilder();
+
+        st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int K = Integer.parseInt(st.nextToken());
+
+        for (int i = 0; i <= 200; i++) {
+            dp[i][1] = i;
+            dp[i][0] = 1;
+            dp[i][i] = 1;
+        }
+
+        for (int i = 0; i <= 200; i++) {
+            for (int j = 1; j <= i; j++) {
+                dp[i][j] = dp[i-1][j] + dp[i-1][j-1];
+
+                if(dp[i][j] > 1_000_000_000)
+                    dp[i][j] = 1_000_000_001;
+            }
+        }
+
+        if(dp[M+N][M] < K){
+            System.out.println(-1);
+            return;
+        }
+
+        while (!(N==0 && M == 0)){
+            if(dp[M+N-1][M] >= K){
+                sb.append("a");
+                N--;
+            }else{
+                sb.append("z");
+                K -= dp[M+N-1][M];
+                M--;
+            }
+        }
+
+        System.out.println(sb);
+    }
 }
